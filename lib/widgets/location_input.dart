@@ -33,7 +33,7 @@ class _LocationInputState extends State<LocationInput> {
         'https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyC3blxCzW0VMnNkJ54lOWxp07kamZtMcd4');
     final response = await http.get(url);
     final resData = json.decode(response.body);
-    print(resData);
+    
 
     final address = resData['results'][0]['formatted_address'];
 
